@@ -107,6 +107,44 @@ To view only last 2 logs we can change the number 2 to 3 4 depending on the logs
 #
          git log -n 2
 
+Branching in git
+
+<img width="798" alt="Screenshot 2024-10-07 at 5 21 14 PM" src="https://github.com/user-attachments/assets/f2ab67d4-b3a9-4b2d-873f-54946c91358d">
+
+#
+        git branch newfeature
+        git checkout newfeature
+
+        or it can be done in single cmd
+        
+        git checkout -b newfeature
+
+        not make some changes to the story1.txt
+
+        git add .
+
+        git commit -m "updated branch"
+
+        not make some changes again to the story1.txt
+
+        git add .
+
+        git commit -m "updated branch secondtime"
+
+        git checkout master
+
+        git merge newfeature
+
+        git log
+
+        git branch -d newfeature
+
+        git branch  ## to see the branch doesn't exist
+        
+
+
+
+
 
 
 
