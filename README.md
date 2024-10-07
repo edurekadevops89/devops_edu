@@ -77,8 +77,25 @@ Now lets add second file we can see the untracked file modified file staging are
          git add .
          git commit "added story2.txt"
 
-        
 
+Playing to move file from working area to staging area and staging area to working area
+
+<img width="376" alt="Screenshot 2024-10-06 at 9 10 46 PM" src="https://github.com/user-attachments/assets/6de3cfb8-932d-47e9-bf6a-a30245be2d84">
+
+#
+        echo "thirdline" >> story1.txt
+        git add story1.txt
+        echo "line2insecondfile >>story2.txt
+        git status
+
+        git restore --staged story1.txt
+
+        git add story2.txt
+        git commit -m "updating story2.txt"
+
+
+
+        
 
 
 
