@@ -29,21 +29,56 @@ To create an empty file  and wirite some text to the file
  #
          touch story1.txt
          echo "my  frist line1"
+        
 
 To view the status where we are now on those there stage we can use git status cmd
 #
         git status
+        git ls-files
 
 To add the file to the staging area 
 #
         git add story1.txt
+        git status
+        git ls-files
 
 To commit the file 
 #
-        git commit -m "my1st commit"
+        git commit -m "added frist story"
 
+        git status
+        On branch master
+        nothing to commit, working tree clean
+
+Now once we make changes to the story1.txt we can see the file is being tracked but in modified state.
+
+       <img width="517" alt="Screenshot 2024-10-06 at 8 54 33 PM" src="https://github.com/user-attachments/assets/e110ebe4-6c9a-471e-b2e5-b64c71855a46">
+
+       we can use a git cmd to restore as well
+#
+        git restore story1.txt
+
+Now the file is back to orginal postion and its clean git status
+But lets add 2ine and add and commit
+
+#
+        echo "secondline" >>stroy1.txt
+        git add story1.txt
+        git commit -m "updated friststory"
+
+
+Now lets add second file we can see the untracked file modified file staging area 
+
+ <img width="522" alt="Screenshot 2024-10-06 at 9 02 17 PM" src="https://github.com/user-attachments/assets/38f728fd-b34a-4b15-8bfa-773ee25422f2">
+
+ #
+         echo "line1insecondfile" > story2.txt
+         git status
+         git add .
+         git commit "added story2.txt"
 
         
+
 
 
 
