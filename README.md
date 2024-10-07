@@ -93,6 +93,24 @@ Playing to move file from working area to staging area and staging area to worki
         git add story2.txt
         git commit -m "updating story2.txt"
 
+git log is the command to see the commit id date of the commit happened and commit message
+#
+        git log
+
+we can list the changed files as well using the --name-only
+#
+        git log --name-only
+we can see online of commit log
+#
+        git log --oneline
+To view only last 2 logs we can change the number 2 to 3 4 depending on the logs required.
+#
+         git log -n 2
+
+
+
+
+
 
 
         
