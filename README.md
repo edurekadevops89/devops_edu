@@ -15,6 +15,8 @@ To list branches
     git branch
 git command used to start a working area
 #
+    mkdir test
+    cd test
     git init
 You may view additional help on each command following the syntax git help <command>. For this you must first install git man pages using the command
 #
@@ -140,6 +142,42 @@ Branching in git
         git branch -d newfeature
 
         git branch  ## to see the branch doesn't exist
+        
+
+Create a git a ccount and play in GUI 
+
+The current directory which is intialized as git  to sync to remote repos, the below url should be update with your repo url
+#
+        git remote add origin https://github.com/saidevops8989/test.git
+
+        git push origin master
+        
+Remote branch push  we can push to the branches as well
+#
+        git push --set-upstream origin b9
+
+
+Cloning remote repository Update the url with your git repo url
+#
+        git clone https://github.com/saidevops8989/test.git
+
+
+Pulling the changes from the remote branch after cloning
+#
+        git  fetch origin master
+
+        git merge origin/master
+        ABOVE BOTH  COMMANDS CAN BE DONE IN SINGLE CMD with
+
+        git pull origin master
+
+
+Create a pull request in the GUI create a branch make some changes and then merge the branch to the master
+
+
+        
+        
+
         
 
 
