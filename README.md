@@ -141,7 +141,7 @@ Branching in git
 
         git branch -d newfeature
 
-        git branch  ## to see the branch doesn't exist
+        git branch  ## to see the branch doesn't exists
         
 
 Create a git a ccount and play in GUI 
