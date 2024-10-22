@@ -175,6 +175,60 @@ Pulling the changes from the remote branch after cloning
 Create a pull request in the GUI create a branch make some changes and then merge the branch to the master
 
 
+stashing
+This functionality is useful when you’ve made changes  that you aren’t ready to commit, but you need to commit one file among two then we need stash one file and commit the otherone
+#
+        git stash 
+
+        git stash list
+
+        git stash pop
+
+        git stash push story1.txt
+
+        git stash pop stash@{0}
+
+
+git revert is undo the changes made in the previous commit and a new commit is created without changes made in the other commit.
+
+#
+        git log --oneline
+
+        git show 
+
+        git show hashcode
+
+        git revert hashcode
+
+git reset has two types on is soft and hard soft will reset to the previous has but keeps the changes hard reset is completly moving back to the hash mentioned,comit some chages
+like commit A commit B commit C we can go abck to commit B 
+#
+        
+        git log --oneline
+        
+        git reset  hashcode
+
+        git status
+
+        git reset --hard hashcode
+
+git rebase 
+create commit A B on master and create a branch on that create commit C D E
+when we rease master  with branch then we can see the commits A B C D E
+#
+        git checkout master
+
+        git rebase branchname
+
+        git log --oneline
+
+git forking copy of an existing git repo that allows the new owner to make changes to the project without effecting the oringial
+
+
+        
+
+        
+
         
         
 
