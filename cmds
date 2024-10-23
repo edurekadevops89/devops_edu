@@ -33,6 +33,19 @@ sudo apt-get install jenkins
 #######
 
 
+###git installation on centos9###
+
+sudo dnf install git
+
+###maven installation on centos9###
+
+sudo dnf install maven
+
+
+
+
+
+
 
 
   
