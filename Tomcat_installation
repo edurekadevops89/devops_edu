@@ -1,0 +1,82 @@
+
+###manually install tomcat ###
+
+# dnf install  tomcat* -y
+
+#systemctl stop firewalld         ###or allow the port 8080 in the firewalld
+
+#Edit tomcat-user.xml to allow user to access the tomcat server
+
+#cat /etc/tomcat/tomcat-users.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+
+  <role rolename="manager-gui"/>
+  <role rolename="manager-script"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+
+  <user username="admin" password="redhat" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
+
+</tomcat-users>
+
+### to access the tomcat fromt the remote server ##
+
+cat /var/lib/tomcat/webapps/manager/META-INF/context.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<Context antiResourceLocking="false" privileged="true" >
+  <CookieProcessor className="org.apache.tomcat.util.http.Rfc6265CookieProcessor"
+                   sameSiteCookies="strict" />
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="^.*$" />
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+</Context>
+
+
+##install maven ###
+
+# dnf install maven
+
+#dnf install git
+
+#git clone https://github.com/saidevops8989/addressbook-project.git
+
+#cd addressbook-project/
+
+#mvn compile
+
+#mvn package
+
+#cd target/
+
+#ls -l addressbook.war
+-rw-r--r--. 1 root root 22652376 Jan 31 21:17 addressbook.war
+
+#cp addressbook.war /var/lib/tomcat/webapps/
+
+#####go the web browser and access server ip 8080### you will be seeing the addressbook
+
+
+
+
+
+
