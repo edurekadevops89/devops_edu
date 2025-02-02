@@ -65,7 +65,9 @@ But lets add 2ine and add and commit
 
 #
         echo "secondline" >>stroy1.txt
+        git diff
         git add story1.txt
+        git diff --staged
         git commit -m "updated friststory"
 
 
