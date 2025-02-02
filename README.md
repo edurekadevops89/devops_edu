@@ -168,7 +168,10 @@ Pulling the changes from the remote branch after cloning
 #
         git  fetch origin master
 
+        git diff origin/master
+
         git merge origin/master
+        
         ABOVE BOTH  COMMANDS CAN BE DONE IN SINGLE CMD with
 
         git pull origin master
