@@ -168,6 +168,8 @@ Pulling the changes from the remote branch after cloning
 #
         git  fetch origin master
 
+        git show <hashfrom abovecmd>       #this will show what was the changes that was made
+         
         git diff origin/master
 
         git merge origin/master
