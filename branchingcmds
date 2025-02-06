@@ -1,0 +1,57 @@
+####BRANCHING CMDS######
+
+git branch                               #### to see branches
+
+git branch b3
+
+git branch
+
+git checkout b3                         #####git checkout -b b4   ####create branch and move to that branch
+
+git branch
+
+###create a files and add and commit###
+
+git log --oneline
+
+vi test.txt 
+
+git add .
+
+git commit -m "commitbranch msg"
+
+git push --set-upstream origin <branchname>
+
+###GO to GUI and see the branch deatils and create Pull request and demo PR######
+###Once merged delete the branch####
+
+git branch -d <branchname>
+
+git checkout main
+
+git log --oneline --graph
+
+git fetch
+
+git merge                   ######BOTH fetch and merge can be done with git pull ###
+
+git pull
+
+git log --oneline --graph
+
+git show <hashcode>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
