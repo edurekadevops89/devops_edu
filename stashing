@@ -1,0 +1,58 @@
+####To work on stashing####
+
+root@serverA ~/test (main)#git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+root@serverA ~/test (main)#ls
+README.md    test.txt
+
+#####now create a second file test2.txt and make some changes and makes changes on test.txt as well ###
+
+root@serverA ~/test (main)#ls
+README.md  test2.txt  test.txt
+
+root@serverA ~/test (main)# git add .
+
+#########NOW IF WE COMMIT BOTH CHANGES GET COMMITED BUT YOU HAVEN"T DECIDED THE CHANGES ON TEST SO TO SKIP ONE FILE WE NEED STASHING AND THEN COMMIT 1 files#
+BEFORE
+
+git status
+
+git ls-files
+
+git stash push -m "stash test2" --test2.txt 
+
+AFTER
+
+git status
+
+git ls-files
+
+git diff origin/main
+
+git commit -m "b2commit"
+
+git ls-files
+
+git stash list
+
+git stash  pop stash@{0}
+
+git ls-files
+
+git status
+
+####now makes sure if you ok with modifiacations and confident then commit the test.txt as well########
+
+
+
+
+
+
+
+
+
+
