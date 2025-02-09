@@ -1,0 +1,62 @@
+######REPO########
+[jenkins]
+name=Jenkins-stable
+baseurl=http://pkg.jenkins.io/redhat-stable
+gpgcheck=1
+
+
+####
+
+
+cat script.sh
+  sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo dnf upgrade
+# Add required dependencies for the jenkins package
+sudo dnf install fontconfig java-17-openjdk
+sudo dnf install jenkins
+sudo systemctl daemon-reload
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl disable firewalld
+sudo systemctl stop firewalld
+#####
+
+
+##INSTALL PLUGIN TO DEMO ####
+
+AUDIT TRIAL PLUGIN to see who has done what on the jobs
+
+Manage - jenkins-> system -> go to audit section
+
+LOG files - /tmp/audit.log
+
+size 20
+
+count 7
+
+then save
+
+now run some job you should see /tmp/audit.log.0
+
+###THIN BACKUP plugin
+
+Inatall and restart jenkins
+
+mkdir /var/lib/jenkins/jenkins_backup
+
+move to GUI -> manage jenkins->system -> got thinbackup section and give the above location  -NOTE: tick the boxes and save
+
+
+
+
+ 
+
+
+
+
+
+
+
+
